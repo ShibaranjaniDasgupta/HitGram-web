@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HITgram - N-Gram Model</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>HITgram - N-Gram Text Predictor</h1>
+      </header>
+
+      <!-- File Upload Section -->
+      <section id="upload-section">
+        <h2>Upload Your Text File</h2>
+        <form id="upload-form">
+          <input
+            type="file"
+            id="file-input"
+            name="file"
+            accept=".txt"
+            required
+          />
+          <button type="submit">Upload and Build Model</button>
+        </form>
+        <div id="upload-status"></div>
+      </section>
+
+      <!-- Text Prediction Section -->
+      <section id="prediction-section">
+        <h2>Generate Text Prediction</h2>
+        <form id="prediction-form">
+          <label for="sentence">Enter Sentence:</label>
+          <input type="text" id="sentence-input" name="sentence" required />
+          <label for="numWords">Number of Words:</label>
+          <input
+            type="number"
+            id="num-words-input"
+            name="numWords"
+            value="5"
+            min="1"
+            required
+          />
+          <button type="submit">Generate Prediction</button>
+        </form>
+        <div id="prediction-result"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
